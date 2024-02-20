@@ -1,23 +1,27 @@
 package hashing;
 
-public class HashingComPorao implements EstruturaDeDados{
+import java.util.HashSet;
+import java.util.Set;
+
+public class HashingComPorao implements EstruturaDeDados {
+    private Set<Integer> conjunto;
+
+    public HashingComPorao() {
+        this.conjunto = new HashSet<>();
+    }
 
     @Override
     public void insert(int chave) {
-        // TODO Auto-generated method stub
-        
+        conjunto.add(chave);
     }
 
     @Override
     public void delete(int chave) {
-        // TODO Auto-generated method stub
-        
+        conjunto.remove(chave);
     }
 
     @Override
     public boolean search(int chave) {
-        // TODO Auto-generated method stub
-        return false;
+        return conjunto.contains(chave);
     }
-    
 }

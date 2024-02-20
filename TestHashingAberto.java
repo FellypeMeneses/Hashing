@@ -61,6 +61,6 @@ public class TestHashingAberto {
     public void testDeleteHashingComPorao(){
         assertTrue(hp.search(10));
         hp.delete(10);
-        assertTrue(hp.search(10));
+        assertFalse(hp.search(10));
     }
 }
